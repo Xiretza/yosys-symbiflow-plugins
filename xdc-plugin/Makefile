@@ -2,7 +2,7 @@ CXX = $(shell yosys-config --cxx)
 CXXFLAGS = $(shell yosys-config --cxxflags)
 LDFLAGS = $(shell yosys-config --ldflags)
 LDLIBS = $(shell yosys-config --ldlibs)
-PLUGINS_DIR = $(shell yosys-config --datdir)/plugins
+PLUGINS_DIR = $(DESTDIR)$(shell yosys-config --datdir)/plugins
 
 OBJS = xdc.o
 VERILOG_MODULES = BANK.v

@@ -37,9 +37,9 @@
 # |-- example2-plugin
 # |-- ...
 CXX = $(shell yosys-config --cxx)
-CXXFLAGS = $(shell yosys-config --cxxflags) #-DSDC_DEBUG
-LDFLAGS = $(shell yosys-config --ldflags)
-LDLIBS = $(shell yosys-config --ldlibs)
+CXXFLAGS := $(shell yosys-config --cxxflags) $(CXXFLAGS) #-DSDC_DEBUG
+LDFLAGS := $(shell yosys-config --ldflags) $(LDFLAGS)
+LDLIBS := $(shell yosys-config --ldlibs) $(LDLIBS)
 PLUGINS_DIR = $(DESTDIR)$(shell yosys-config --datdir)/plugins
 DATA_DIR = $(DESTDIR)$(shell yosys-config --datdir)
 
